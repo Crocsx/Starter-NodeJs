@@ -1,10 +1,11 @@
 import * as Models from './models/index';
+import * as mongodb from 'mongodb';
+import * as yaml from 'js-yaml';
+import * as fs from 'fs';
 
-const mongodb = require('mongodb');
-const yaml = require('js-yaml');
-const fs = require('fs');
 const MongoClient = mongodb.MongoClient;
 let config: Models.Config;
+
 try {
     config = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
     MongoClient.connect(`${config.mongodb.local.host}:${config.mongodb.local.port}`, { useNewUrlParser : true  }, (error, client) => {
@@ -15,7 +16,9 @@ try {
         db.collection('users').insertOne({
             id: "1",
             name: "Bobby"
-        })
+        }, (error, result) => {
+            
+        });
     });
 } catch (e) {
     console.log(e);
