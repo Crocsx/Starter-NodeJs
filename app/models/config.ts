@@ -14,6 +14,6 @@ export interface Config {
             host: string
             databaseName: string
             port: number
-        },
+        }
     };
 }

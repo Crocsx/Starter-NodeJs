@@ -8,6 +8,7 @@
     "mongodb": "^3.2.7"
   },
   "devDependencies": {
+    "@types/js-yaml": "^3.12.1",
     "@types/mongodb": "^3.1.28",
     "@types/node": "^12.6.3",
     "ts-node-dev": "^1.0.0-pre.40",
