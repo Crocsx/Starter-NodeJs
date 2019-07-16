@@ -1,0 +1,29 @@
+{
+  "name": "taskapp-njs",
+  "version": "1.0.0",
+  "description": "play with nodeJS",
+  "main": "index.js",
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "mongodb": "^3.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.3",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev"  : "tsnd --respawn app/main.ts --experimental-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crocsx/taskApp-njs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crocsx/taskApp-njs/issues"
+  },
+  "homepage": "https://github.com/Crocsx/taskApp-njs#readme"
+}

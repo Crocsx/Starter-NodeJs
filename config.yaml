@@ -1,0 +1,13 @@
+mongodb:
+  local:
+    host: "mongodb://127.0.0.1"
+    databaseName: "task-manager"
+    port: 27017
+  dev:
+    host:
+    databaseName: ""
+    port: 27017
+  prod:
+    host:
+    databaseName: ""
+    port: 27017
