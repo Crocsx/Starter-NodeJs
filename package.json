@@ -1,5 +1,5 @@
 {
-  "name": "taskapp-njs",
+  "name": "NodeJSInit",
   "version": "1.0.0",
   "description": "play with nodeJS",
   "main": "index.js",
@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Crocsx/taskApp-njs.git"
+    "url": "git+https://github.com/Crocsx/NodeJSInit.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Crocsx/taskApp-njs/issues"
+    "url": "https://github.com/Crocsx/NodeJSInit/issues"
   },
-  "homepage": "https://github.com/Crocsx/taskApp-njs#readme"
+  "homepage": "https://github.com/Crocsx/NodeJSInit#readme"
 }
