@@ -2,10 +2,10 @@ server:
   local:
     hostname: "127.0.0.1"
     port: 3000
-  development:
+  dev:
     hostname:
     port: 27017
-  production:
+  prod:
     hostname:
     port: 27017
 mongodb:
@@ -13,18 +13,18 @@ mongodb:
     host: "mongodb://127.0.0.1"
     databaseName: "task-manager"
     port: 27017
-  development:
+  dev:
     host:
     databaseName: ""
     port: 27017
-  production:
+  prod:
     host:
     databaseName: ""
     port: 27017
 token:
-  local:
-    key: "local:token"
-  development:
-    key: "dev:token"
-  production:
-    key: "prod:token"
+    local:
+    key: ""
+  dev:
+    key: ""
+  prod:
+    key: ""

@@ -1,33 +1,43 @@
 {
-  "name": "NodeJSInit",
+  "name": "NodeJsInit",
   "version": "1.0.0",
   "description": "play with nodeJS",
-  "main": "index.js",
+  "main": "main.js",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
     "js-yaml": "^3.13.1",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.2.7",
-    "mongoose": "^5.6.4"
+    "mongoose": "^5.6.4",
+    "validator": "^11.1.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.0",
     "@types/js-yaml": "^3.12.1",
+    "@types/jsonwebtoken": "^8.3.2",
     "@types/mongodb": "^3.1.28",
     "@types/mongoose": "^5.5.8",
     "@types/node": "^12.6.3",
+    "@types/validator": "^10.11.1",
     "ts-node-dev": "^1.0.0-pre.40",
     "typescript": "^3.5.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsnd --respawn app/main.ts --experimental-modules"
+    "start": "set NODE_ENV=production && node build/index.js",
+    "build": "npx tsc",
+    "dev": "set NODE_ENV=development && tsnd --respawn app/main.ts --experimental-modules",
+    "local": "set NODE_ENV=local && tsnd --respawn app/main.ts --experimental-modules"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Crocsx/NodeJSInit.git"
+    "url": "git+https://github.com/Crocsx/NodeJsInit.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Crocsx/NodeJSInit/issues"
+    "url": "https://github.com/Crocsx/NodeJsInit/issues"
   },
-  "homepage": "https://github.com/Crocsx/NodeJSInit#readme"
+  "homepage": "https://github.com/Crocsx/NodeJsInit#readme"
 }
