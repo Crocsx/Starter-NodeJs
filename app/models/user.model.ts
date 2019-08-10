@@ -11,6 +11,7 @@ export interface IUser extends Document {
     username: string;
     password : string;
     email : string;
+    avatar: Buffer
     tokens : Array<IUserToken>
     generateAuthToken: () => string
 }
@@ -42,6 +43,9 @@ const UserSchema: Schema = new Schema({
         trim: true,
         lowercase : true,
         validate(value: string) { return validator.isEmail(value)} 
+    }, 
+    avatar: { 
+        type : Buffer, 
     },
     tokens: [{
         token: {
@@ -49,8 +53,11 @@ const UserSchema: Schema = new Schema({
             required: true,
         }
     }]
+}, {
+    timestamps: true
 });
 
+// If user change password, we store an hashed version
 UserSchema.pre('save', async function (next) {
     const user = this as IUser;
     if(user.isModified('password')) {
@@ -85,7 +92,7 @@ UserSchema.methods.generateAuthToken = async function () {
     const user = this;
     const token = await jwt.sign({
         _id : user._id.toString()
-    }, global.config.token.local.key);
+    }, process.env.JWT_SECRET!);
     user.tokens.push({token});
     await user.save();
     return token;
@@ -103,6 +110,7 @@ UserSchema.methods.toJSON = function () {
 
     delete userObject.password;
     delete userObject.tokens;
+    delete userObject.avatar;
 
     return userObject;
 }

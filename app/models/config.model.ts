@@ -50,5 +50,17 @@ export interface IConfig {
         production: {
             key : string
         }
+    },
+    sendGrid: {
+        [key:string]: {key : string},
+        local: {
+            key : string
+        }
+        development: {
+            key : string
+        }
+        production: {
+            key : string
+        }
     }
 }
