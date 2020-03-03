@@ -1,7 +1,7 @@
 {
-  "name": "deferred",
+  "name": "NodeJsInit",
   "version": "1.0.0",
-  "description": "Deferred Back-End",
+  "description": "NodeJsInit",
   "main": "main.js",
   "dependencies": {
     "@sendgrid/mail": "^6.5.3",
