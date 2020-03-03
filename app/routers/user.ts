@@ -93,7 +93,7 @@ const avatar = multer({
     },
     fileFilter: (req, file, cb) => {
         if(!file.originalname.match(/\.(jpg|png|jpeg)$/)){
-            cb(new Error('Unsupported format'), false);
+            cb(null, false);
         }
         cb(null, true);
     }

@@ -17,7 +17,7 @@ export interface IUser extends Document {
 }
 
 interface IUserModel extends Model<IUser> {
-    findByCredential(username: string, password: string): any; // this should be changed to the correct return type if possible.
+    findByCredential(username: string, password: string): IUser;
 }
 
 const UserSchema: Schema = new Schema({
